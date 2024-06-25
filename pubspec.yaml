@@ -1,0 +1,44 @@
+name: realtime_detection
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  camera: ^0.11.0+1
+  tflite_v2: ^1.0.0
+  package_info_plus: ^8.0.0
+  freewill_fx_widgets: ^0.0.3
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+     - assets/model/
+     - assets/test_model/
+     - assets/breathalyzer_model/
+     - assets/mobilenet_v1_1.0_224.txt
+     - assets/mobilenet_v1_1.0_224.tflite
+     - assets/yolov2_tiny.tflite
+     - assets/yolov2_tiny.txt
+     - assets/ssd_mobilenet.tflite
+     - assets/ssd_mobilenet.txt
+     - assets/posenet_mv1_075_float_from_checkpoints.tflite
+     - assets/breathalyzer_model/model_unquant.tflite
+     - assets/breathalyzer_model/labels.txt

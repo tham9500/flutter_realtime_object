@@ -1,0 +1,10 @@
+0 car
+1 human
+2 glasses
+3 hat
+4 ear ring
+5 remote
+6 bottle
+7 mobile phone
+8 chair
+9 breathalyzer
