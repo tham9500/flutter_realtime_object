@@ -1,0 +1,43 @@
+PODS:
+  - camera_avfoundation (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - package_info_plus (0.4.5):
+    - Flutter
+  - TensorFlowLiteC (2.14.0):
+    - TensorFlowLiteC/Core (= 2.14.0)
+  - TensorFlowLiteC/Core (2.14.0)
+  - tflite (1.1.2):
+    - Flutter
+    - TensorFlowLiteC
+
+DEPENDENCIES:
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
+  - Flutter (from `Flutter`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - tflite (from `.symlinks/plugins/tflite/ios`)
+
+SPEC REPOS:
+  trunk:
+    - TensorFlowLiteC
+
+EXTERNAL SOURCES:
+  camera_avfoundation:
+    :path: ".symlinks/plugins/camera_avfoundation/ios"
+  Flutter:
+    :path: Flutter
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  tflite:
+    :path: ".symlinks/plugins/tflite/ios"
+
+SPEC CHECKSUMS:
+  camera_avfoundation: 759172d1a77ae7be0de08fc104cfb79738b8a59e
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  package_info_plus: 58f0028419748fad15bf008b270aaa8e54380b1c
+  TensorFlowLiteC: a836de9b6e6018665ccc349538bdd2c3b80dd7a5
+  tflite: 7acd11db0915e2d90ab90474413068568eb605f0
+
+PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
+
+COCOAPODS: 1.15.2

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:freewill_fx_widgets/fx.dart';
-import 'package:tflite_v2/tflite_v2.dart';
+import 'package:tflite/tflite.dart';
 import 'dart:math' as math;
 
 import 'camera.dart';

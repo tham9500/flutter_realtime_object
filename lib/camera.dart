@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'package:tflite_v2/tflite_v2.dart';
+import 'package:tflite/tflite.dart';
 import 'dart:math' as math;
 
 import 'models.dart';

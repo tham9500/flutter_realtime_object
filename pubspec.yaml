@@ -13,7 +13,8 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   camera: ^0.11.0+1
-  tflite_v2: ^1.0.0
+  tflite:
+    path: ./tflite-1.1.2-custom/
   package_info_plus: ^8.0.0
   freewill_fx_widgets: ^0.0.3
   
