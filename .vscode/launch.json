@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_realtime_object",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_realtime_object (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_realtime_object (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "tflite-1.1.2-custom",
+            "cwd": "tflite-1.1.2-custom",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tflite-1.1.2-custom (profile mode)",
+            "cwd": "tflite-1.1.2-custom",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "tflite-1.1.2-custom (release mode)",
+            "cwd": "tflite-1.1.2-custom",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

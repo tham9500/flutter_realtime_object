@@ -34,28 +34,53 @@ class _HomePageState extends State<HomePage> {
     String res;
     try {
       switch (_model) {
+        // case yolo:
+        //   res = (await Tflite.loadModel(
+        //     model: "assets/breathalyzer_model/model_unquant.tflite",
+        //     labels: "assets/breathalyzer_model/labels.txt",
+        //   ))!;
+        //   break;
+
+        // case mobilenet:
+        //   res = (await Tflite.loadModel(
+        //       model: "assets/mobilenet_v1_1.0_224.tflite",
+        //       labels: "assets/mobilenet_v1_1.0_224.txt"))!;
+        //   break;
+
+        // case posenet:
+        //   res = (await Tflite.loadModel(
+        //       model: "assets/posenet_mv1_075_float_from_checkpoints.tflite"))!;
+        //   break;
+
+        // default:
+        //   res = (await Tflite.loadModel(
+        //       model: "assets/ssd_mobilenet.tflite",
+        //       labels: "assets/ssd_mobilenet.txt"))!;
         case yolo:
           res = (await Tflite.loadModel(
-            model: "assets/yolov2_tiny.tflite",
-            labels: "assets/yolov2_tiny.txt",
+            model: "assets/breathalyzer_model/model_unquant.tflite",
+            labels: "assets/breathalyzer_model/labels.txt",
           ))!;
           break;
 
         case mobilenet:
           res = (await Tflite.loadModel(
-              model: "assets/mobilenet_v1_1.0_224.tflite",
-              labels: "assets/mobilenet_v1_1.0_224.txt"))!;
+            model: "assets/breathalyzer_model/model_unquant.tflite",
+            labels: "assets/breathalyzer_model/labels.txt",
+          ))!;
           break;
 
         case posenet:
           res = (await Tflite.loadModel(
-              model: "assets/posenet_mv1_075_float_from_checkpoints.tflite"))!;
+            model: "assets/breathalyzer_model/model_unquant.tflite",
+          ))!;
           break;
 
         default:
           res = (await Tflite.loadModel(
-              model: "assets/ssd_mobilenet.tflite",
-              labels: "assets/ssd_mobilenet.txt"))!;
+            model: "assets/breathalyzer_model/model_unquant.tflite",
+            labels: "assets/breathalyzer_model/labels.txt",
+          ))!;
       }
       print(res);
     } catch (e) {
@@ -92,13 +117,22 @@ class _HomePageState extends State<HomePage> {
                     child: const FXText(ssd),
                     onTap: () => onSelect(ssd),
                   ),
+                  const SizedBox(
+                    height: 24,
+                  ),
                   InkWell(
                     child: const FXText(yolo),
                     onTap: () => onSelect(yolo),
                   ),
+                  const SizedBox(
+                    height: 24,
+                  ),
                   InkWell(
                     child: const FXText(mobilenet),
                     onTap: () => onSelect(mobilenet),
+                  ),
+                  const SizedBox(
+                    height: 24,
                   ),
                   InkWell(
                     child: const FXText(posenet),
