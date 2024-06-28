@@ -34,28 +34,6 @@ class _HomePageState extends State<HomePage> {
     String res;
     try {
       switch (_model) {
-        // case yolo:
-        //   res = (await Tflite.loadModel(
-        //     model: "assets/breathalyzer_model/model_unquant.tflite",
-        //     labels: "assets/breathalyzer_model/labels.txt",
-        //   ))!;
-        //   break;
-
-        // case mobilenet:
-        //   res = (await Tflite.loadModel(
-        //       model: "assets/mobilenet_v1_1.0_224.tflite",
-        //       labels: "assets/mobilenet_v1_1.0_224.txt"))!;
-        //   break;
-
-        // case posenet:
-        //   res = (await Tflite.loadModel(
-        //       model: "assets/posenet_mv1_075_float_from_checkpoints.tflite"))!;
-        //   break;
-
-        // default:
-        //   res = (await Tflite.loadModel(
-        //       model: "assets/ssd_mobilenet.tflite",
-        //       labels: "assets/ssd_mobilenet.txt"))!;
         case yolo:
           res = (await Tflite.loadModel(
             model: "assets/breathalyzer_model/model_unquant.tflite",
@@ -65,22 +43,44 @@ class _HomePageState extends State<HomePage> {
 
         case mobilenet:
           res = (await Tflite.loadModel(
-            model: "assets/breathalyzer_model/model_unquant.tflite",
-            labels: "assets/breathalyzer_model/labels.txt",
-          ))!;
+              model: "assets/mobilenet_v1_1.0_224.tflite",
+              labels: "assets/mobilenet_v1_1.0_224.txt"))!;
           break;
 
         case posenet:
           res = (await Tflite.loadModel(
-            model: "assets/breathalyzer_model/model_unquant.tflite",
-          ))!;
+              model: "assets/face_model_posenet.tflite"))!;
           break;
 
         default:
           res = (await Tflite.loadModel(
-            model: "assets/breathalyzer_model/model_unquant.tflite",
-            labels: "assets/breathalyzer_model/labels.txt",
-          ))!;
+              model: "assets/ssd_mobilenet.tflite",
+              labels: "assets/ssd_mobilenet.txt"))!;
+        // case yolo:
+        //   res = (await Tflite.loadModel(
+        //     model: "assets/breathalyzer_model/model_unquant.tflite",
+        //     labels: "assets/breathalyzer_model/labels.txt",
+        //   ))!;
+        //   break;
+
+        // case mobilenet:
+        //   res = (await Tflite.loadModel(
+        //     model: "assets/breathalyzer_model/model_unquant.tflite",
+        //     labels: "assets/breathalyzer_model/labels.txt",
+        //   ))!;
+        //   break;
+
+        // case posenet:
+        //   res = (await Tflite.loadModel(
+        //     model: "assets/breathalyzer_model/model_unquant.tflite",
+        //   ))!;
+        //   break;
+
+        // default:
+        //   res = (await Tflite.loadModel(
+        //     model: "assets/breathalyzer_model/model_unquant.tflite",
+        //     labels: "assets/breathalyzer_model/labels.txt",
+        //   ))!;
       }
       print(res);
     } catch (e) {
