@@ -40,6 +40,6 @@ flutter:
      - assets/yolov2_tiny.txt
      - assets/ssd_mobilenet.tflite
      - assets/ssd_mobilenet.txt
-     - assets/posenet_mv1_075_float_from_checkpoints.tflite
+     - assets/face_model_posenet.tflite
      - assets/breathalyzer_model/model_unquant.tflite
      - assets/breathalyzer_model/labels.txt

@@ -69,10 +69,11 @@ class _CameraState extends State<Camera> {
                 imageHeight: img.height,
                 imageWidth: img.width,
                 numResults: 2,
-              ).then((recognitions) {
+              ).then((recognitions) async {
                 int endTime = DateTime.now().millisecondsSinceEpoch;
-                print("Detection took ${endTime - startTime}");
 
+                print("Detection took ${endTime - startTime}");
+                await Future.delayed(const Duration(milliseconds: 250));
                 widget.setRecognitions(recognitions!, img.height, img.width);
 
                 isDetecting = false;
@@ -82,17 +83,21 @@ class _CameraState extends State<Camera> {
                 bytesList: img.planes.map((plane) {
                   return plane.bytes;
                 }).toList(),
-                model: widget.model == yolo ? "YOLO" : "SSDMobileNet",
-                imageHeight: img.height,
-                imageWidth: img.width,
+                // model: widget.model == yolo ? "YOLO" : "SSDMobileNet",
+                model: "SSDMobileNet",
                 imageMean: widget.model == yolo ? 0 : 127.5,
                 imageStd: widget.model == yolo ? 255.0 : 127.5,
+                imageHeight: img.height,
+                imageWidth: img.width,
+                // imageMean: 127.5,
+                // imageStd: 255.0,
                 numResultsPerClass: 1,
-                threshold: widget.model == yolo ? 0.2 : 0.4,
-              ).then((recognitions) {
+                numBoxesPerBlock: 1,
+                threshold: 0.4,
+              ).then((recognitions) async {
                 int endTime = DateTime.now().millisecondsSinceEpoch;
                 print("Detection took ${endTime - startTime}");
-
+                await Future.delayed(const Duration(milliseconds: 250));
                 widget.setRecognitions(recognitions!, img.height, img.width);
 
                 isDetecting = false;
